@@ -19,17 +19,14 @@ Synthesis requires three files as follows,
 
 ◦ Verilog/VHDL Files (.v or .vhdl or .vhd)
 # Testbench :
-timescale 1ns / 1ps
 ```
+timescale 1ns / 1ps
 module up_down_counter_tb();
-
 reg clk;
 reg reset;
 reg up_down;
 reg enable;
 wire [3:0] count;
-
-
 up_down_counter uut(
     .clk(clk),
     .reset(reset),
@@ -38,12 +35,10 @@ up_down_counter uut(
     .count(count)
 );
 
-
 initial begin
     clk = 0;
     forever #5 clk = ~clk;  
 end
-
 
 initial begin
 
@@ -76,7 +71,6 @@ initial begin
 
     $finish;
 end
-
 
 initial begin
     $monitor("Time: %t, Reset: %b, Up/Down: %b, Enable: %b, Count: %b", 
@@ -159,15 +153,13 @@ used.
 • The tool used for Synthesis is “Genus”. Hence, type “genus -gui” to open the tool.
 ![Screenshot 2025-05-09 115020](https://github.com/user-attachments/assets/145ddff7-6d68-4881-b4c6-5c020a38e510)
 
-• Genus Script file with .tcl file Extension commands are executed one by one to synthesize the netlist.
-
-#### Synthesis RTL Schematic :
+• Genus Script file with .tcl file Extension commands are executed one by one to synthesize the netlist
 
 #### Area report:
-![Screenshot 2025-05-09 174900](https://github.com/user-attachments/assets/59bf1c7b-813b-42f0-92e1-cac5fddbe92c)
+![Screenshot 2025-05-20 155633](https://github.com/user-attachments/assets/a73fcbef-8b31-41fa-8aa0-b8636b855a39)
 
 #### Power Report:
-![Screenshot 2025-05-09 174605](https://github.com/user-attachments/assets/9d083411-c736-4dd0-9f3f-ab1836ee4954)
+![Screenshot 2025-05-20 155730](https://github.com/user-attachments/assets/fb89dda5-b23c-4edd-8981-07220130e541)
 
 #### Timing Report: 
 ![Screenshot 2025-05-09 115147](https://github.com/user-attachments/assets/76238d71-4f2f-4e11-a41e-c387c018e3ba)
