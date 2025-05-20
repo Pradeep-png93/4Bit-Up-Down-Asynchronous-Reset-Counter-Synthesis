@@ -106,7 +106,7 @@ end
 endmodule
 ```
 ◦ SDC (Synopsis Design Constraint) File (.sdc)
-
+## Synthesis RTL Schematic :
 ![Screenshot 2025-05-09 114632](https://github.com/user-attachments/assets/7e54eed0-e6a3-4c21-9211-8f7d84219746)
 
  ### Step 2 : Creating an SDC File
